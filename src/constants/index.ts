@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
       "Message edit/delete with live notifications",
     ],
     liveUrl: "https://chatly-x.vercel.app",
-    githubUrl: `${SOCIAL_LINKS.github}/pareesh-portfolio/social-pareesh`,
+    githubUrl: `${SOCIAL_LINKS.github}/social-pareesh`,
      image: "projects/chatly.png",
   },
   {
