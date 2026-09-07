@@ -22,10 +22,10 @@ Built with a focus on clean UI, accessibility, and a seamless user experience ac
 
 ## 🚀 Getting Started
 
-1. Clone the repo: `git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git`
+1. Clone the repo: `git clone https://github.com/yadav-pareesh/pareesh-portfolio.git`
 2. Install dependencies: `npm install` (or `yarn install` / `pnpm install`)
 3. Run the development server: `npm run dev`
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
 ## 📬 Contact
 
