@@ -27,7 +27,7 @@ export default function About() {
               {Object.entries(SKILLS).map(([category, items]) => (
                 <Card key={category}>
                   <CardContent className="pt-4">
-                    <h3 className="font-medium capitalize mb-2">{category}</h3>
+                    <h3 className="font-medium mb-2">{category}</h3>
                     <div className="flex flex-wrap gap-2">
                       {items.map((skill) => (
                         <Badge key={skill} variant="secondary">
