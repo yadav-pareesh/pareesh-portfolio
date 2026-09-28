@@ -1,11 +1,17 @@
-import { ArrowRight, Code, Database, Globe, Users, type LucideIcon } from "lucide-react"
+import { ArrowRight, Code2, Server, Database, Layers, Cloud, type LucideIcon } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { PERSONAL, HOME_SKILLS } from "@/constants"
+import { PERSONAL, TECH_STACK } from "@/constants"
 
-const iconMap: Record<string, LucideIcon> = { Code, Database, Globe, Users }
+const iconMap: Record<string, LucideIcon> = {
+  Code2,
+  Server,
+  Database,
+  Layers,
+  Cloud,
+}
 
 export default function Home() {
 
@@ -37,21 +43,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-semibold text-center mb-8">
+      {/* Tech Stack Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-center mb-8">
             Tech Stack
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-            {HOME_SKILLS.map((skill) => {
-              const Icon = iconMap[skill.icon as keyof typeof iconMap]
-              if (!Icon) return null
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {TECH_STACK.map((item, index) => {
+              const Icon = iconMap[item.icon as keyof typeof iconMap]
+              const isLast = index === TECH_STACK.length - 1
               return (
-                <Card key={skill.name} className="text-center">
+                <Card
+                  key={item.category}
+                  className={`transition-all duration-300 hover:border-primary/40 hover:shadow-md ${
+                    isLast ? "md:col-span-2 lg:col-span-2" : ""
+                  }`}
+                >
                   <CardContent className="pt-6">
-                    <Icon className="h-8 w-8 mx-auto mb-2 text-primary" />
-                    <p className="text-sm font-medium">{skill.name}</p>
+                    <div className="flex items-center gap-2.5 mb-4">
+                      {Icon && (
+                        <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                          <Icon className="h-4 w-4" />
+                        </div>
+                      )}
+                      <h3 className="font-semibold text-base tracking-tight">
+                        {item.category}
+                      </h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {item.skills.map((skill) => (
+                        <Badge
+                          key={skill}
+                          variant="secondary"
+                          className="font-normal text-xs py-1 px-2.5 hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               )

@@ -39,24 +39,72 @@ export const NAV_LINKS = [
 // 4. SKILLS (Grouped by Category)
 // ============================================================
 export const SKILLS = {
-  frontend: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "React Native"],
-  backend: ["Node.js", "Express.js", "Socket.io", "WebRTC", "REST APIs"],
-  state_Management: ["Redux", "Zustand"],
-  database: ["PostgreSQL", "MongoDB", "Prisma ORM"],
-  tools: ["Git", "GitHub", "Postman", "Railway", "Vercel", "Netlify", "AWS ec2 & S3"],
+  "Frontend Development": [
+    "React.js",
+    "Next.js",
+    "React Native",
+    "TypeScript",
+    "JavaScript (ES6+)",
+    "Tailwind CSS",
+  ],
+  "Backend Development": [
+    "Node.js",
+    "Express.js",
+    "REST APIs",
+    "Socket.io",
+    "WebRTC",
+  ],
+  "Databases & ORMs": ["PostgreSQL", "MongoDB", "Prisma"],
+  "State Management": ["Redux", "Zustand"],
+  "Tools, Cloud & DevOps": [
+    "Git",
+    "GitHub",
+    "Postman",
+    "Railway",
+    "Vercel",
+    "Netlify",
+  ],
 } as const
 
 // ============================================================
-// 5. TECH STACK ICONS (For Home Page)
+// 5. TECH STACK (For Home Page Showcase)
 // ============================================================
-export const HOME_SKILLS = [
-  { name: "React", icon: "Code" },
-  { name: "Node.js", icon: "Code" },
-  { name: "PostgreSQL", icon: "Database" },
-  { name: "MongoDB", icon: "Database" },
-  { name: "Socket.io", icon: "Globe" },
-  { name: "WebRTC", icon: "Users" },
+export const TECH_STACK = [
+  {
+    category: "Frontend Development",
+    icon: "Code2",
+    skills: [
+      "React.js",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    category: "Backend Development",
+    icon: "Server",
+    skills: ["Node.js", "Express.js", "REST APIs", "Socket.io", "WebRTC"],
+  },
+  {
+    category: "Databases & ORMs",
+    icon: "Database",
+    skills: ["PostgreSQL", "MongoDB", "Prisma"],
+  },
+  {
+    category: "State Management",
+    icon: "Layers",
+    skills: ["Redux", "Zustand"],
+  },
+  {
+    category: "Tools, Cloud & DevOps",
+    icon: "Cloud",
+    skills: ["AWS EC2 & S3", "Git", "GitHub", "Postman", "Railway", "Vercel", "Netlify"],
+  },
 ] as const
+
+export const HOME_SKILLS = TECH_STACK
 
 // ============================================================
 // 6. WORK EXPERIENCE
@@ -158,6 +206,30 @@ export const PROJECTS: Project[] = [
     image: "projects/droply.png",
   },
   {
+    id: "ergobreak",
+    title: "ErgoBreak",
+    description:
+      "Drift-resilient ergonomic workstation and screen-break pacer featuring customizable 20-20-20 eye rests, guided posture stretches, Document Picture-in-Picture mini timer, and synthesized audio cues.",
+    tech: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "PWA",
+      "Web Audio API",
+      "Document PiP API"
+    ],
+    features: [
+      "Drift-resilient timestamp delta timer immune to browser background tab throttling",
+      "Always-on-top Document Picture-in-Picture (PiP) interactive floating mini-timer",
+      "16 guided desk stretches across 5 body zones with animated SVG illustrations",
+      "Procedural acoustic chimes synthesized in-memory via native Web Audio API (zero audio assets)",
+      "Offline-first PWA with versioned local streak & focus analytics dashboard",
+    ],
+    liveUrl: "https://ergobreak.vercel.app",
+    githubUrl: `${SOCIAL_LINKS.github}/screen-break`,
+    image: "projects/ergobreak.png",
+  },
+  {
     id: "portfolio",
     title: "Pareesh.dev - Portfolio",
     description:
@@ -169,7 +241,7 @@ export const PROJECTS: Project[] = [
       "Modular component architecture with centralized constants",
       "Deployed on Vercel with custom domain (pareeshyadav.xyz)",
     ],
-    liveUrl: "https://pareeshyadav.xyz",
+    liveUrl: "/",
     githubUrl: `${SOCIAL_LINKS.github}/pareesh-portfolio`,
     image: "projects/portfolio.png",
   },
