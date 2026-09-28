@@ -7,11 +7,11 @@ export const PERSONAL = {
   domain: "https://pareeshyadav.xyz",
   email: "pareeshyadav@gmail.com",
   location: "India (IST)",
-  tagline:"Full-Stack Developer with 3+ years of experience building real-time applications and scalable APIs.",
+  tagline: "Full-Stack Developer with 3+ years of experience building real-time applications and scalable APIs.",
   bio: ["I'm a Full-Stack Developer with 3+ years of experience building real-time web applications and scalable APIs. I specialize in React, Node.js, and Socket.io, and I love solving complex performance problems.",
-        "I started coding during my BCA and discovered my passion for full-stack development. Over the last 3 years, I've owned products end-to-end—from architecture to deployment—while maintaining 99.7% uptime and optimizing performance by up to 35%.",
-        "When I'm not coding, I enjoy exploring new technologies, playing chess, and contributing to open-source projects."
-    ],  
+    "I started coding during my BCA and discovered my passion for full-stack development. Over the last 3 years, I've owned products end-to-end—from architecture to deployment—while maintaining 99.7% uptime and optimizing performance by up to 35%.",
+    "When I'm not coding, I enjoy exploring new technologies, playing chess, and contributing to open-source projects."
+  ],
   availability: "Open to opportunities" as const,
   resumeUrl: "/resume.pdf",
 } as const
@@ -22,7 +22,7 @@ export const PERSONAL = {
 export const SOCIAL_LINKS = {
   github: "https://www.github.com/yadav-pareesh",
   linkedin: "https://www.linkedin.com/in/pareeshyadav",
-  email: "mailto:pareeshyadav@gmail.com", 
+  email: "mailto:pareeshyadav@gmail.com",
 } as const
 
 // ============================================================
@@ -103,9 +103,9 @@ export const PROJECTS: Project[] = [
       "Real-time collaborative editing",
       "99.7% uptime over 3 years",
     ],
-    liveUrl: "https://app.sleekcms.com", 
+    liveUrl: "https://app.sleekcms.com",
     githubUrl: "#",
-     image: "projects/sleekcms.png",
+    image: "projects/sleekcms.png",
   },
   {
     id: "chatly",
@@ -121,7 +121,7 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://chatly-x.vercel.app",
     githubUrl: `${SOCIAL_LINKS.github}/social-pareesh`,
-     image: "projects/chatly.png",
+    image: "projects/chatly.png",
   },
   {
     id: "shortlink",
@@ -137,23 +137,41 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://shortly-x.netlify.app",
     githubUrl: `${SOCIAL_LINKS.github}/shortly-fe`,
-     image: "projects/shortly.png",
+    image: "projects/shortly.png",
+  },
+  {
+    id: "quickdrop",
+    title: "QuickDrop",
+    description:
+      "Production-grade peer-to-peer file sharing platform enabling direct, zero-cloud browser-to-browser transfers using WebRTC data channels, binary streaming, and cryptographic integrity verification.",
+    tech: ["React 19", "TypeScript", "WebRTC", "Tailwind CSS", "WebSockets", "Node.js", "Zustand"],
+    features: [
+      "Direct P2P file transfers with zero intermediate cloud storage",
+      "Binary chunking with backpressure flow control & SHA-256 checksums",
+      "Cross-device room pairing via 6-character codes and QR code scanner",
+      "Integrated real-time peer-to-peer chat within active sessions",
+      "Dual signaling mesh: WebSocket relay for WAN & BroadcastChannel for local tabs",
+      "Installable PWA with dark/light themes and IndexedDB transfer history",
+    ],
+    liveUrl: "https://droply-x.netlify.app",
+    githubUrl: `${SOCIAL_LINKS.github}/quick-drop`,
+    image: "projects/droply.png",
   },
   {
     id: "portfolio",
     title: "Pareesh.dev - Portfolio",
     description:
-        "A modern, responsive developer portfolio website built with React, TypeScript, and Tailwind CSS. Features a clean UI, dark/light theme toggle, and dynamic project showcases.",
+      "A modern, responsive developer portfolio website built with React, TypeScript, and Tailwind CSS. Features a clean UI, dark/light theme toggle, and dynamic project showcases.",
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "React Router"],
     features: [
-        "Dark/Light theme toggle with system preference detection",
-        "Fully responsive & mobile-first design",
-        "Modular component architecture with centralized constants",
-        "Deployed on Vercel with custom domain (pareeshyadav.xyz)",
+      "Dark/Light theme toggle with system preference detection",
+      "Fully responsive & mobile-first design",
+      "Modular component architecture with centralized constants",
+      "Deployed on Vercel with custom domain (pareeshyadav.xyz)",
     ],
     liveUrl: "https://pareeshyadav.xyz",
     githubUrl: `${SOCIAL_LINKS.github}/pareesh-portfolio`,
-     image: "projects/portfolio.png",
+    image: "projects/portfolio.png",
   },
 ] as const
 
