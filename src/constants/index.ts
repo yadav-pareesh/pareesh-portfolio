@@ -172,20 +172,29 @@ export const PROJECTS: Project[] = [
     image: "projects/chatly.png",
   },
   {
-    id: "shortlink",
-    title: "ShortLink",
+    id: "frontend-library-ecosystem",
+    title: "Frontend Library Ecosystem",
     description:
-      "URL shortener with custom aliases, QR code generation, and comprehensive click analytics tracking geo, device, and browser data.",
-    tech: ["React", "Node.js", "Express", "PostgreSQL", "Prisma", "Zustand"],
-    features: [
-      "Custom aliases with nanoid generation",
-      "QR code generation & download",
-      "Click analytics dashboard (geo, device, browser, OS)",
-      "One-click copy to clipboard",
+      "High-performance monorepo ecosystem comprising 32+ modular, zero-dependency React hooks, browser utilities, and UI primitives with dual ESM/CJS compilation, strict TypeScript types, and an interactive documentation playground.",
+    tech: [
+      "React 18",
+      "TypeScript",
+      "Turborepo",
+      "Vite",
+      "pnpm Workspaces",
+      "tsup",
+      "Vitest"
     ],
-    liveUrl: "https://shortly-x.netlify.app",
-    githubUrl: `${SOCIAL_LINKS.github}/shortly-fe`,
-    image: "projects/shortly.png",
+    features: [
+      "32+ modular zero-dependency packages spanning state management, browser APIs, UI utilities, and performance",
+      "Dual ESM and CommonJS builds with generated TypeScript declaration maps orchestrated via Turborepo & tsup",
+      "Interactive documentation site and live playground with real-time log inspector and demo error boundaries",
+      "SSR-safe design preventing hydration mismatches and window object access faults across all hooks",
+      "Automated monorepo CI/CD pipelines covering unit testing, strict type checks, and GitHub Pages deployment",
+    ],
+    liveUrl: "https://yadav-pareesh.github.io/frontend-library-ecosystem",
+    githubUrl: `${SOCIAL_LINKS.github}/frontend-library-ecosystem`,
+    image: "projects/frontend-library-ecosystem.png",
   },
   {
     id: "quickdrop",
@@ -204,6 +213,22 @@ export const PROJECTS: Project[] = [
     liveUrl: "https://droply-x.netlify.app",
     githubUrl: `${SOCIAL_LINKS.github}/quick-drop`,
     image: "projects/droply.png",
+  },
+  {
+    id: "shortlink",
+    title: "ShortLink",
+    description:
+      "URL shortener with custom aliases, QR code generation, and comprehensive click analytics tracking geo, device, and browser data.",
+    tech: ["React", "Node.js", "Express", "PostgreSQL", "Prisma", "Zustand"],
+    features: [
+      "Custom aliases with nanoid generation",
+      "QR code generation & download",
+      "Click analytics dashboard (geo, device, browser, OS)",
+      "One-click copy to clipboard",
+    ],
+    liveUrl: "https://shortly-x.netlify.app",
+    githubUrl: `${SOCIAL_LINKS.github}/shortly-fe`,
+    image: "projects/shortly.png",
   },
   {
     id: "ergobreak",
