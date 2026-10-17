@@ -215,6 +215,32 @@ export const PROJECTS: Project[] = [
     image: "projects/droply.png",
   },
   {
+    id: "js-compiler",
+    title: "Online JavaScript Compiler",
+    description:
+      "Production-grade, lightweight in-browser JavaScript coding and execution workspace featuring CodeMirror 6, an isolated zero-trust sandbox with strict CSP, real-time formatted console streams, and execution watchdog protection.",
+    tech: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "CodeMirror 6",
+      "Vitest",
+      "Web Workers / Iframes"
+    ],
+    features: [
+      "Isolated zero-trust execution sandbox with opaque null origin and strict Content Security Policy (connect-src 'none')",
+      "Full-featured CodeMirror 6 editor with JavaScript syntax highlighting, bracket matching, autocompletion, and font sizing",
+      "Multi-level console stream interceptor supporting log, info, warn, error, debug, and structured tabular rendering for console.table()",
+      "Cycle-safe serializer handling circular references, BigInt, Symbols, Map, Set, Errors, and depth-limited object graphs",
+      "3-second parent watchdog timer that automatically terminates and resurrects the sandbox during infinite loops without freezing the UI",
+      "Extensible language registry architecture prepared for future multi-runtime expansions (Pyodide, WebAssembly, remote containers)",
+    ],
+    liveUrl: "https://pareesh-jscompiler.vercel.app",
+    githubUrl: `${SOCIAL_LINKS.github}/online-compiler`,
+    image: "projects/online-compiler.png",
+  },
+  {
     id: "shortlink",
     title: "ShortLink",
     description:
