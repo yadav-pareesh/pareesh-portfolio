@@ -26,48 +26,7 @@ export const SOCIAL_LINKS = {
 } as const
 
 // ============================================================
-// 3. NAVIGATION LINKS
-// ============================================================
-export const NAV_LINKS = [
-  { name: "Home", path: "/" },
-  { name: "Projects", path: "/projects" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
-] as const
-
-// ============================================================
-// 4. SKILLS (Grouped by Category)
-// ============================================================
-export const SKILLS = {
-  "Frontend Development": [
-    "React.js",
-    "Next.js",
-    "React Native",
-    "TypeScript",
-    "JavaScript (ES6+)",
-    "Tailwind CSS",
-  ],
-  "Backend Development": [
-    "Node.js",
-    "Express.js",
-    "REST APIs",
-    "Socket.io",
-    "WebRTC",
-  ],
-  "Databases & ORMs": ["PostgreSQL", "MongoDB", "Prisma"],
-  "State Management": ["Redux", "Zustand"],
-  "Tools, Cloud & DevOps": [
-    "Git",
-    "GitHub",
-    "Postman",
-    "Railway",
-    "Vercel",
-    "Netlify",
-  ],
-} as const
-
-// ============================================================
-// 5. TECH STACK (For Home Page Showcase)
+// 3. TECH STACK
 // ============================================================
 export const TECH_STACK = [
   {
@@ -104,10 +63,8 @@ export const TECH_STACK = [
   },
 ] as const
 
-export const HOME_SKILLS = TECH_STACK
-
 // ============================================================
-// 6. WORK EXPERIENCE
+// 4. WORK EXPERIENCE
 // ============================================================
 export const WORK_EXPERIENCE = {
   company: "SleekSky",
@@ -127,6 +84,8 @@ export const WORK_EXPERIENCE = {
 // ============================================================
 // 7. PROJECTS
 // ============================================================
+export type ProjectCategory = "all" | "fullstack" | "devtools"
+
 export type Project = {
   id: string
   title: string
@@ -136,6 +95,7 @@ export type Project = {
   liveUrl: string
   githubUrl: string
   image?: string
+  category?: ProjectCategory
 }
 
 export const PROJECTS: Project[] = [
@@ -153,7 +113,8 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://app.sleekcms.com",
     githubUrl: "#",
-    image: "projects/sleekcms.png",
+    image: "/projects/sleekcms.png",
+    category: "fullstack",
   },
   {
     id: "chatly",
@@ -169,7 +130,8 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://chatly-x.vercel.app",
     githubUrl: `${SOCIAL_LINKS.github}/social-pareesh`,
-    image: "projects/chatly.png",
+    image: "/projects/chatly.png",
+    category: "fullstack",
   },
   {
     id: "frontend-library-ecosystem",
@@ -194,7 +156,8 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://yadav-pareesh.github.io/frontend-library-ecosystem",
     githubUrl: `${SOCIAL_LINKS.github}/frontend-library-ecosystem`,
-    image: "projects/frontend-library-ecosystem.png",
+    image: "/projects/frontend-library-ecosystem.png",
+    category: "devtools",
   },
   {
     id: "quickdrop",
@@ -212,7 +175,8 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://droply-x.netlify.app",
     githubUrl: `${SOCIAL_LINKS.github}/quick-drop`,
-    image: "projects/droply.png",
+    image: "/projects/droply.png",
+    category: "fullstack",
   },
   {
     id: "js-compiler",
@@ -238,7 +202,8 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://pareesh-jscompiler.vercel.app",
     githubUrl: `${SOCIAL_LINKS.github}/online-compiler`,
-    image: "projects/online-compiler.png",
+    image: "/projects/online-compiler.png",
+    category: "devtools",
   },
   {
     id: "shortlink",
@@ -254,7 +219,8 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://shortly-x.netlify.app",
     githubUrl: `${SOCIAL_LINKS.github}/shortly-fe`,
-    image: "projects/shortly.png",
+    image: "/projects/shortly.png",
+    category: "fullstack",
   },
   {
     id: "ergobreak",
@@ -278,7 +244,8 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://ergobreak.vercel.app",
     githubUrl: `${SOCIAL_LINKS.github}/screen-break`,
-    image: "projects/ergobreak.png",
+    image: "/projects/ergobreak.png",
+    category: "devtools",
   },
   {
     id: "portfolio",
@@ -292,16 +259,9 @@ export const PROJECTS: Project[] = [
       "Modular component architecture with centralized constants",
       "Deployed on Vercel with custom domain (pareeshyadav.xyz)",
     ],
-    liveUrl: "/",
+    liveUrl: "https://www.pareeshyadav.xyz",
     githubUrl: `${SOCIAL_LINKS.github}/pareesh-portfolio`,
-    image: "projects/portfolio.png",
+    image: "/projects/portfolio.png",
+    category: "devtools",
   },
 ] as const
-
-// ============================================================
-// 8. FOOTER COPYRIGHT
-// ============================================================
-export const FOOTER_TEXT = {
-  copyright: (year: number) =>
-    `© ${year} Pareesh Yadav. All rights reserved.`,
-} as const
